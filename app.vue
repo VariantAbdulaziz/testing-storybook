@@ -1,6 +1,15 @@
 <template>
   <div>
-    <NuxtRouteAnnouncer />
-    <NuxtWelcome />
+    <AuthTemplate />
   </div>
 </template>
+
+<script>
+import AuthTemplate from "./components/templates/auth-template.vue";
+
+export default {
+  components: {
+    AuthTemplate,
+  },
+};
+</script>

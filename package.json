@@ -15,7 +15,11 @@
     "test": "yarn test:e2e"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.6.0",
+    "@fortawesome/free-solid-svg-icons": "^6.6.0",
+    "@fortawesome/vue-fontawesome": "^3.0.8",
     "@vitejs/plugin-vue": "^5.1.4",
+    "element-plus": "^2.8.4",
     "nuxt": "^3.13.0",
     "vue": "latest",
     "vue-router": "latest"
@@ -23,6 +27,7 @@
   "devDependencies": {
     "@chromatic-com/cypress": "^0.8.0",
     "@chromatic-com/storybook": "^1.9.0",
+    "@element-plus/nuxt": "^1.0.10",
     "@nuxtjs/storybook": "7.0.2",
     "@storybook-vue/nuxt": "0.2.6",
     "@storybook/addon-essentials": "^8.3.5",

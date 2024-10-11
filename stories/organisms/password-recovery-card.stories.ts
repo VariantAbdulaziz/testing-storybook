@@ -5,6 +5,7 @@ import PasswordRecoveryCard from "../../components/organisms/password-recovery-c
 
 const meta: Meta<typeof PasswordRecoveryCard> = {
   title: "organisms/PasswordRecoveryCard",
+  tags: ["autodocs"],
   component: PasswordRecoveryCard,
   parameters: {
     docs: {

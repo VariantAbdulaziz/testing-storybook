@@ -5,6 +5,7 @@ import LoginCard from "../../components/organisms/login-card.vue";
 
 const meta: Meta<typeof LoginCard> = {
   title: "organisms/LoginCard",
+  tags: ["autodocs"],
   component: LoginCard,
   parameters: {
     docs: {

@@ -4,6 +4,7 @@ import PasswordRecoveryConfimationCard from "../../components/organisms/password
 
 const meta: Meta<typeof PasswordRecoveryConfimationCard> = {
   title: "organisms/PasswordRecoveryConfimationCard",
+  tags: ["autodocs"],
   component: PasswordRecoveryConfimationCard,
   argTypes: {
     recoveryEmail: {

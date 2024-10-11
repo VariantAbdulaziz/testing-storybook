@@ -6,6 +6,7 @@ import RegistrationCard from "../../components/organisms/registration-card.vue";
 
 const meta: Meta<typeof RegistrationCard> = {
   title: "organisms/RegistrationCard",
+  tags: ["autodocs"],
   component: RegistrationCard,
   argTypes: {
     emailIn: {

@@ -3,6 +3,7 @@ import type { Meta, StoryObj } from "@storybook/vue3";
 
 const meta = {
   title: "Atoms/Button",
+  tags: ["autodocs"],
   component: Button,
   argTypes: {
     type: {

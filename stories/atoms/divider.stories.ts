@@ -3,6 +3,7 @@ import type { Meta, StoryObj } from "@storybook/vue3";
 
 const meta = {
   title: "Atoms/Divider",
+  tags: ["autodocs"],
   component: Divider,
   parameters: {
     docs: {

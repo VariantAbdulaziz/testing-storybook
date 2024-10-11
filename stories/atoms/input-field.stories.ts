@@ -4,6 +4,7 @@ import { ref } from "vue";
 
 const meta = {
   title: "atoms/InputField",
+  tags: ["autodocs"],
   component: InputField,
   argTypes: {
     modelValue: {

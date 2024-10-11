@@ -3,6 +3,7 @@ import type { Meta, StoryObj } from "@storybook/vue3";
 
 const meta = {
   title: "molecules/BackToLogin",
+  tags: ["autodocs"],
   component: BackToLogin,
   parameters: {
     docs: {

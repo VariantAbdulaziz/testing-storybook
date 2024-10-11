@@ -4,6 +4,7 @@ import { ref } from "vue";
 
 const meta = {
   title: "molecules/AuthForm",
+  tags: ["autodocs"],
   component: AuthForm,
   parameters: {
     docs: {

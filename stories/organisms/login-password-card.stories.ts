@@ -7,6 +7,7 @@ import LoginPasswordCard from "../../components/organisms/login-password-card.vu
 // Set up the meta information for the component
 const meta: Meta<typeof LoginPasswordCard> = {
   title: "organisms/LoginPasswordCard",
+  tags: ["autodocs"],
   component: LoginPasswordCard,
   parameters: {
     docs: {

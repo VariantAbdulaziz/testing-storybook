@@ -8,6 +8,7 @@ import AladiaLogo from "../../assets/img/aladia.png";
 
 const meta = {
   title: "molecules/ProfileUpload",
+  tags: ["autodocs"],
   component: ProfileUpload,
   parameters: {
     docs: {

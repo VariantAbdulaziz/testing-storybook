@@ -9,6 +9,7 @@ const placeholderLogo = "https://via.placeholder.com/96?text=Logo";
 
 const meta: Meta<typeof VerificationCard> = {
   title: "organisms/VerificationCard",
+  tags: ["autodocs"],
   component: VerificationCard,
   argTypes: {
     userName: {

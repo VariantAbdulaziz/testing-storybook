@@ -4,6 +4,7 @@ import { ref } from "vue";
 
 const meta = {
   title: "molecules/TermsCheckbox",
+  tags: ["autodocs"],
   component: TermsCheckbox,
   argTypes: {
     modelValue: {

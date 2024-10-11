@@ -9,6 +9,7 @@ import facebookIcon from "../../assets/img/facebook-logo.png";
 // Define the component's metadata using `Meta` type from Storybook
 const meta = {
   title: "molecules/SocialButton",
+  tags: ["autodocs"],
   component: SocialButton,
   argTypes: {
     iconSrc: {

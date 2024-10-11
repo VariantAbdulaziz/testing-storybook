@@ -3,6 +3,7 @@ import type { Meta, StoryObj } from "@storybook/vue3";
 
 const meta = {
   title: "molecules/Hero",
+  tags: ["autodocs"],
   component: Hero,
   argTypes: {
     title: {

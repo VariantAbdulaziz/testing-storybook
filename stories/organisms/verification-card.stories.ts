@@ -48,7 +48,7 @@ export const Default: Story = {
       return { args };
     },
     template: `
-      <div class="p-4 bg-gray-900 flex justify-center items-center min-h-screen">
+      <div class="p-4 bg-black flex justify-center items-center min-h-screen">
         <VerificationCard
           :userName="args.userName"
           :logo="args.logo"
@@ -76,7 +76,7 @@ export const CustomUser: Story = {
       return { args };
     },
     template: `
-      <div class="p-4 bg-gray-900 flex justify-center items-center min-h-screen">
+      <div class="p-4 bg-black flex justify-center items-center min-h-screen">
         <VerificationCard
           :userName="args.userName"
           :logo="args.logo"
@@ -87,37 +87,6 @@ export const CustomUser: Story = {
   parameters: {
     docs: {
       storyDescription: "Verification card with custom user name and logo.",
-    },
-  },
-};
-
-/** Verification Card with Code Pre-filled (for Testing) */
-export const PrefilledCode: Story = {
-  args: {
-    userName: "Aladia User",
-    logo: placeholderLogo,
-  },
-  render: (args) => ({
-    components: { VerificationCard },
-    setup() {
-      const code = ref(["1", "2", "3", "4", "5", "6"]);
-
-      return { args, code };
-    },
-    template: `
-      <div class="p-4 bg-gray-900 flex justify-center items-center min-h-screen">
-        <VerificationCard
-          :userName="args.userName"
-          :logo="args.logo"
-          v-model:code="code"
-        />
-      </div>
-    `,
-  }),
-  parameters: {
-    docs: {
-      storyDescription:
-        "Verification card with the code pre-filled (for testing purposes).",
     },
   },
 };

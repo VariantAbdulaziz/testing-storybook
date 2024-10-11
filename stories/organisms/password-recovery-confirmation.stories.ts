@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/vue3";
 
-// Import your component and any dependencies
 import PasswordRecoveryConfimationCard from "../../components/organisms/password-recovery-confirmation.vue";
 
 const meta: Meta<typeof PasswordRecoveryConfimationCard> = {
@@ -70,36 +69,6 @@ export const CustomEmail: Story = {
   parameters: {
     docs: {
       storyDescription: "Password recovery card with a custom email address.",
-    },
-  },
-};
-
-/** With Resend Email Handler */
-export const WithResendHandler: Story = {
-  args: {
-    recoveryEmail: "user@example.com",
-  },
-  render: (args) => ({
-    components: { PasswordRecoveryConfimationCard },
-    setup() {
-      const sendEmailAgain = (email: string) => {
-        alert(`Email resent to: ${email}`);
-      };
-      return { args, sendEmailAgain };
-    },
-    template: `
-      <div class="p-4 bg-gray-900 flex justify-center items-center min-h-screen">
-        <PasswordRecoveryConfimationCard
-          :recoveryEmail="args.recoveryEmail"
-          @sendEmailAgain="sendEmailAgain(args.recoveryEmail)"
-        />
-      </div>
-    `,
-  }),
-  parameters: {
-    docs: {
-      storyDescription:
-        "Password recovery card with a custom resend email handler.",
     },
   },
 };

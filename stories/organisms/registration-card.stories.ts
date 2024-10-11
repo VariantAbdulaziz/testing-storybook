@@ -43,7 +43,7 @@ export const Default: Story = {
       return { args, handleSubmitRegistration };
     },
     template: `
-      <div class="p-4 bg-gray-900 flex justify-center items-center min-h-screen">
+      <div class="p-4 bg-black flex justify-center items-center min-h-screen">
         <RegistrationCard
           :emailIn="args.emailIn"
           @submitRegistration="handleSubmitRegistration"
@@ -74,7 +74,7 @@ export const EmptyFields: Story = {
       return { args, handleSubmitRegistration };
     },
     template: `
-      <div class="p-4 bg-gray-900 flex justify-center items-center min-h-screen">
+      <div class="p-4 bg-black flex justify-center items-center min-h-screen">
         <RegistrationCard
           :emailIn="args.emailIn"
           @submitRegistration="handleSubmitRegistration"
@@ -104,7 +104,7 @@ export const InvalidEmail: Story = {
       return { args, handleSubmitRegistration };
     },
     template: `
-      <div class="p-4 bg-gray-900 flex justify-center items-center min-h-screen">
+      <div class="p-4 bg-black flex justify-center items-center min-h-screen">
         <RegistrationCard
           :emailIn="args.emailIn"
           @submitRegistration="handleSubmitRegistration"
@@ -120,45 +120,28 @@ export const InvalidEmail: Story = {
   },
 };
 
-/** Registration Card with Pre-filled Data */
-export const PrefilledData: Story = {
+/** Registration Card with Pre-filled Email */
+export const PrefilledEmail: Story = {
   args: {
     emailIn: "jane.doe@example.com",
   },
   render: (args) => ({
     components: { RegistrationCard },
     setup() {
-      // Pre-fill other fields using refs
-      const name = ref("Jane");
-      const surname = ref("Doe");
-      const password = ref("password123");
-      const confirmPassword = ref("password123");
-      const isChecked = ref(true);
-
       const handleSubmitRegistration = (data: any) => {
         alert(`Registration data submitted:\n${JSON.stringify(data, null, 2)}`);
       };
 
       return {
         args,
-        name,
-        surname,
-        password,
-        confirmPassword,
-        isChecked,
         handleSubmitRegistration,
       };
     },
     template: `
-      <div class="p-4 bg-gray-900 flex justify-center items-center min-h-screen">
+      <div class="p-4 bg-black flex justify-center items-center min-h-screen">
         <RegistrationCard
           :emailIn="args.emailIn"
           @submitRegistration="handleSubmitRegistration"
-          v-model:name="name"
-          v-model:surname="surname"
-          v-model:password="password"
-          v-model:confirmPassword="confirmPassword"
-          v-model:isChecked="isChecked"
         />
       </div>
     `,

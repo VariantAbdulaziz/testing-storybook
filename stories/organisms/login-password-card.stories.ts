@@ -27,7 +27,7 @@ export const Default: Story = {
   render: () => ({
     components: { LoginPasswordCard },
     template: `
-      <div class="p-4 bg-gray-900 flex justify-center items-center min-h-screen">
+      <div class="p-4 bg-black flex justify-center items-center min-h-screen">
         <LoginPasswordCard />
       </div>
     `,
@@ -40,8 +40,8 @@ export const Default: Story = {
   },
 };
 
-/** With Submit Handler */
-export const WithSubmitHandler: Story = {
+/** With Handlers */
+export const WithHandlers: Story = {
   render: () => ({
     components: { LoginPasswordCard },
     setup() {
@@ -56,7 +56,7 @@ export const WithSubmitHandler: Story = {
       return { handleSubmitPassword, handleForgotPassword };
     },
     template: `
-      <div class="p-4 bg-gray-900 flex justify-center items-center min-h-screen">
+      <div class="p-4 bg-black flex justify-center items-center min-h-screen">
         <LoginPasswordCard
           @submitPassword="handleSubmitPassword"
           @forgotPassword="handleForgotPassword"
@@ -68,41 +68,6 @@ export const WithSubmitHandler: Story = {
     docs: {
       storyDescription:
         "LoginPasswordCard with handlers for submitPassword and forgotPassword events.",
-    },
-  },
-};
-
-/** With Pre-filled Password (for Testing) */
-export const PrefilledPassword: Story = {
-  render: () => ({
-    components: { LoginPasswordCard },
-    setup() {
-      const password = ref("password123");
-
-      const handleSubmitPassword = (submittedPassword: string) => {
-        alert(`Password submitted: ${submittedPassword}`);
-      };
-
-      const handleForgotPassword = () => {
-        alert("Forgot Password clicked!");
-      };
-
-      return { password, handleSubmitPassword, handleForgotPassword };
-    },
-    template: `
-      <div class="p-4 bg-gray-900 flex justify-center items-center min-h-screen">
-        <LoginPasswordCard
-          v-model="password"
-          @submitPassword="handleSubmitPassword"
-          @forgotPassword="handleForgotPassword"
-        />
-      </div>
-    `,
-  }),
-  parameters: {
-    docs: {
-      storyDescription:
-        "LoginPasswordCard with a pre-filled password for testing purposes.",
     },
   },
 };

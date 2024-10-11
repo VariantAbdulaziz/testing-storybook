@@ -2,10 +2,6 @@ import ProfileUpload from "../../components/molecules/profile-upload.vue";
 import type { Meta, StoryObj } from "@storybook/vue3";
 import { ref } from "vue";
 
-// Import the AladiaLogo image
-// Adjust the path according to your Storybook setup
-import AladiaLogo from "../../assets/img/aladia.png";
-
 const meta = {
   title: "molecules/ProfileUpload",
   tags: ["autodocs"],
@@ -37,7 +33,7 @@ export const Default: Story = {
         alert(`File selected: ${file.name}`);
       };
 
-      return { selectedFile, handleUpdate, AladiaLogo };
+      return { selectedFile, handleUpdate };
     },
     template: `
       <div class="p-4 bg-gray-800 text-white">

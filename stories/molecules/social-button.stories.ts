@@ -1,11 +1,6 @@
 import SocialButton from "../../components/molecules/social-button.vue";
 import type { Meta, StoryObj } from "@storybook/vue3";
 
-// Import icons from the assets directory
-import googleIcon from "../../assets/img/google-logo.png";
-import appleIcon from "../../assets/img/apple-logo.png";
-import facebookIcon from "../../assets/img/facebook-logo.png";
-
 // Define the component's metadata using `Meta` type from Storybook
 const meta = {
   title: "molecules/SocialButton",
@@ -37,7 +32,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    iconSrc: googleIcon, // Using Google icon as default for the placeholder
+    iconSrc: "../../assets/img/google-logo.png", // Using Google icon as default for the placeholder
     label: "Default Button",
   },
   parameters: {
@@ -58,7 +53,7 @@ export const Default: Story = {
 // Apple Button with local icon
 export const AppleButton: Story = {
   args: {
-    iconSrc: appleIcon,
+    iconSrc: "../../assets/img/google-logo.png",
     label: "Sign in with Apple",
   },
   parameters: {
@@ -79,7 +74,7 @@ export const AppleButton: Story = {
 // Facebook Button with local icon
 export const FacebookButton: Story = {
   args: {
-    iconSrc: facebookIcon,
+    iconSrc: "../../assets/img/apple-logo.png",
     label: "Continue with Facebook",
   },
   parameters: {
@@ -100,7 +95,7 @@ export const FacebookButton: Story = {
 // Google Button with local icon
 export const GoogleButton: Story = {
   args: {
-    iconSrc: googleIcon,
+    iconSrc: "../../assets/img/google-logo.png",
     label: "Sign in with Google",
   },
   parameters: {

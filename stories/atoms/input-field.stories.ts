@@ -140,6 +140,7 @@ export const PasswordField: Story = {
     template: `
       <InputField
         v-model="password"
+        type="password"
         inputId="password-field"
         :icon="['fas', 'lock']"
         label="Password"

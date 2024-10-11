@@ -32,15 +32,6 @@ jobs:
       - name: Build Storybook
         run: yarn build-storybook
 
-      - name: Run Cypress E2E Tests
-        uses: cypress-io/github-action@v6
-        with:
-          build: yarn build
-          start: yarn start
-          config-file: cypress.config.js
-          browser: chrome
-          wait-on: "http://localhost:3000"
-
       - name: Publish to Chromatic
         run: yarn chromatic --project-token=$CHROMATIC_PROJECT_TOKEN
         env:

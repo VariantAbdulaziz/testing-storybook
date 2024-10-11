@@ -32,16 +32,6 @@ jobs:
       - name: Build Storybook
         run: yarn build-storybook
 
-      - name: Run Chromatic
-        run: yarn chromatic --project-token=$CHROMATIC_PROJECT_TOKEN
-        env:
-          CHROMATIC_PROJECT_TOKEN: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-
-      - name: Deploy to Chromatic
-        run: yarn chromatic --cypress --project-token=$CHROMATIC_PROJECT_TOKEN
-        env:
-          CHROMATIC_PROJECT_TOKEN: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-
       - name: Run Cypress E2E Tests
         uses: cypress-io/github-action@v6
         with:
@@ -50,3 +40,13 @@ jobs:
           config-file: cypress.config.js
           browser: chrome
           wait-on: "http://localhost:3000"
+
+      - name: Publish to Chromatic
+        run: yarn chromatic --project-token=$CHROMATIC_PROJECT_TOKEN
+        env:
+          CHROMATIC_PROJECT_TOKEN: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+
+      - name: Run Cypress with Chromatic
+        run: ELECTRON_EXTRA_LAUNCH_ARGS=--remote-debugging-port=9222 yarn chromatic --cypress --project-token=$CHROMATIC_PROJECT_TOKEN
+        env:
+          CHROMATIC_PROJECT_TOKEN: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}

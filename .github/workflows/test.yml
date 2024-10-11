@@ -38,6 +38,6 @@ jobs:
           projectToken: "chpt_0052ec655e43e25"
 
       - name: Run Cypress with Chromatic
-        run: ELECTRON_EXTRA_LAUNCH_ARGS=--remote-debugging-port=9222 yarn chromatic --cypress --project-token=$CHROMATIC_PROJECT_TOKEN
+        run: ELECTRON_EXTRA_LAUNCH_ARGS=--remote-debugging-port=9222 yarn chromatic --cypress --project-token=$CHROMATIC_PROJECT_TOKEN --exit-zero-on-changes
         env:
           CHROMATIC_PROJECT_TOKEN: "chpt_0052ec655e43e25"

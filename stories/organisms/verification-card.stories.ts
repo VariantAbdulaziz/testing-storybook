@@ -1,5 +1,4 @@
 import type { Meta, StoryObj } from "@storybook/vue3";
-import { ref } from "vue";
 
 // Import your component and any dependencies
 import VerificationCard from "../../components/organisms/verification-card.vue";
@@ -49,7 +48,7 @@ export const Default: Story = {
       return { args };
     },
     template: `
-      <div class="p-4 bg-black flex justify-center items-center min-h-screen">
+      <div class="p-4 max-w-sm bg-black flex justify-center items-center min-h-screen">
         <VerificationCard
           :userName="args.userName"
           :logo="args.logo"
@@ -77,7 +76,7 @@ export const CustomUser: Story = {
       return { args };
     },
     template: `
-      <div class="p-4 bg-black flex justify-center items-center min-h-screen">
+      <div class="p-4 max-w-sm bg-black flex justify-center items-center min-h-screen">
         <VerificationCard
           :userName="args.userName"
           :logo="args.logo"

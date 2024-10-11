@@ -38,7 +38,7 @@ export const Default: Story = {
       return { args };
     },
     template: `
-      <div class="p-4 bg-gray-900 flex justify-center items-center min-h-screen">
+      <div class="p-4 max-w-sm bg-black flex justify-center items-center min-h-screen">
         <PasswordRecoveryConfimationCard :recoveryEmail="args.recoveryEmail" />
       </div>
     `,
@@ -62,7 +62,7 @@ export const CustomEmail: Story = {
       return { args };
     },
     template: `
-      <div class="p-4 bg-gray-900 flex justify-center items-center min-h-screen">
+      <div class="flex max-w-sm p-4 bg-black justify-center items-center min-h-screen">
         <PasswordRecoveryConfimationCard :recoveryEmail="args.recoveryEmail" />
       </div>
     `,

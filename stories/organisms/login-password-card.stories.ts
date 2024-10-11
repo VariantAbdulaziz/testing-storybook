@@ -28,7 +28,7 @@ export const Default: Story = {
   render: () => ({
     components: { LoginPasswordCard },
     template: `
-      <div class="p-4 bg-black flex justify-center items-center min-h-screen">
+      <div class="p-4 max-w-sm bg-black flex justify-center items-center min-h-screen">
         <LoginPasswordCard />
       </div>
     `,
@@ -57,7 +57,7 @@ export const WithHandlers: Story = {
       return { handleSubmitPassword, handleForgotPassword };
     },
     template: `
-      <div class="p-4 bg-black flex justify-center items-center min-h-screen">
+      <div class="p-4 max-w-sm bg-black flex justify-center items-center min-h-screen">
         <LoginPasswordCard
           @submitPassword="handleSubmitPassword"
           @forgotPassword="handleForgotPassword"

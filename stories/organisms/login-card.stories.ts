@@ -25,7 +25,7 @@ export const Default: Story = {
   render: () => ({
     components: { LoginCard },
     template: `
-      <div class="py-8 px-4 bg-black flex justify-center items-center min-h-screen">
+      <div class="py-8 px-4 max-w-sm bg-black flex justify-center items-center min-h-screen">
         <LoginCard />
       </div>
     `,
@@ -48,7 +48,7 @@ export const WithSubmitHandler: Story = {
       return { handleLoginSubmit };
     },
     template: `
-      <div class="py-8 px-4 bg-black flex justify-center items-center min-h-screen">
+      <div class="py-8 px-4 max-w-sm bg-black flex justify-center items-center min-h-screen">
         <LoginCard @submitLogin="handleLoginSubmit" />
       </div>
     `,

@@ -44,7 +44,7 @@ export const Default: Story = {
       return { args, handleSubmitRegistration };
     },
     template: `
-      <div class="p-4 bg-black flex justify-center items-center min-h-screen">
+      <div class="p-4 max-w-sm bg-black flex justify-center items-center min-h-screen">
         <RegistrationCard
           :emailIn="args.emailIn"
           @submitRegistration="handleSubmitRegistration"
@@ -75,7 +75,7 @@ export const EmptyFields: Story = {
       return { args, handleSubmitRegistration };
     },
     template: `
-      <div class="p-4 bg-black flex justify-center items-center min-h-screen">
+      <div class="p-4 max-w-sm bg-black flex justify-center items-center min-h-screen">
         <RegistrationCard
           :emailIn="args.emailIn"
           @submitRegistration="handleSubmitRegistration"
@@ -105,7 +105,7 @@ export const InvalidEmail: Story = {
       return { args, handleSubmitRegistration };
     },
     template: `
-      <div class="p-4 bg-black flex justify-center items-center min-h-screen">
+      <div class="p-4 max-w-sm bg-black flex justify-center items-center min-h-screen">
         <RegistrationCard
           :emailIn="args.emailIn"
           @submitRegistration="handleSubmitRegistration"
@@ -139,7 +139,7 @@ export const PrefilledEmail: Story = {
       };
     },
     template: `
-      <div class="p-4 bg-black flex justify-center items-center min-h-screen">
+      <div class="p-4 max-w-sm bg-black flex justify-center items-center min-h-screen">
         <RegistrationCard
           :emailIn="args.emailIn"
           @submitRegistration="handleSubmitRegistration"

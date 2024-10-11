@@ -32,7 +32,7 @@ export const Default: Story = {
       return { handleSubmitRecovery };
     },
     template: `
-      <div class="p-4 bg-black flex justify-center items-center min-h-screen">
+      <div class="p-4 max-w-sm bg-black flex justify-center items-center min-h-screen">
         <PasswordRecoveryCard @submitRecovery="handleSubmitRecovery" />
       </div>
     `,
@@ -59,7 +59,7 @@ export const InvalidEmail: Story = {
       return { recoveryEmail, handleSubmitRecovery };
     },
     template: `
-      <div class="p-4 bg-black flex justify-center items-center min-h-screen">
+      <div class="p-4 max-w-sm bg-black flex justify-center items-center min-h-screen">
         <PasswordRecoveryCard
           :recoveryEmail="recoveryEmail"
           @submitRecovery="handleSubmitRecovery"

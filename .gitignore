@@ -7,7 +7,6 @@
 dist
 
 storybook-static
-cypress/downloads/
 
 
 # Node dependencies

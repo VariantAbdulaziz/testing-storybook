@@ -33,41 +33,12 @@ export const Default: Story = {
     },
     template: `
       <AuthForm @submitEmail="handleSubmit" />
-      <p>Email entered: {{ email }}</p>
     `,
   }),
   parameters: {
     docs: {
       storyDescription:
         "Default AuthForm with basic email input and validation.",
-    },
-  },
-};
-
-/** AuthForm with pre-filled email */
-export const PrefilledEmail: Story = {
-  render: () => ({
-    components: { AuthForm },
-    setup() {
-      const email = ref("user@example.com");
-      const handleSubmit = (submittedEmail: string) => {
-        email.value = submittedEmail;
-        alert(`Email submitted: ${submittedEmail}`);
-      };
-      return { email, handleSubmit };
-    },
-    template: `
-      <AuthForm @submitEmail="handleSubmit" />
-      <p>Email entered: {{ email }}</p>
-    `,
-    mounted() {
-      // Prefill the email input
-      this.$refs.authForm.email = this.email;
-    },
-  }),
-  parameters: {
-    docs: {
-      storyDescription: "AuthForm with a pre-filled email address.",
     },
   },
 };

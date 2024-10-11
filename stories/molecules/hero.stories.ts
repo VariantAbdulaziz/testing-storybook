@@ -69,50 +69,6 @@ export const CustomTitles: Story = {
   },
 };
 
-/** Hero with Custom Image */
-export const CustomImage: Story = {
-  args: {
-    title: "Welcome Back!",
-    subtitle: "We're glad to see you again",
-  },
-  render: (args) => ({
-    components: { Hero },
-    setup() {
-      return { args };
-    },
-    template: `<Hero v-bind="args" />`,
-  }),
-  parameters: {
-    docs: {
-      storyDescription: "Hero component with a custom image source.",
-    },
-  },
-};
-
-/** Hero on Light Background */
-export const LightBackground: Story = {
-  args: {
-    title: "Welcome to Aladia,",
-    subtitle: "Create or access your account from here",
-  },
-  render: (args) => ({
-    components: { Hero },
-    setup() {
-      return { args };
-    },
-    template: `
-      <div class="p-4 bg-white">
-        <Hero v-bind="args" />
-      </div>
-    `,
-  }),
-  parameters: {
-    docs: {
-      storyDescription: "Hero component displayed on a light background.",
-    },
-  },
-};
-
 /** Hero with Long Text */
 export const LongText: Story = {
   args: {

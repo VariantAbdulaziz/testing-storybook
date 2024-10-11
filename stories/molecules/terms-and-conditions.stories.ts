@@ -23,7 +23,7 @@ export const Default: Story = {
   render: () => ({
     components: { TermsAndConditions },
     template: `
-      <div class="p-4 bg-gray-800 text-white">
+      <div class="p-4 bg-black">
         <TermsAndConditions />
       </div>
     `,
@@ -47,7 +47,7 @@ export const WithClickHandler: Story = {
       return { handleClick };
     },
     template: `
-      <div class="p-4 bg-gray-800 text-white">
+      <div class="p-4 bg-black">
         <TermsAndConditions @click="handleClick" />
       </div>
     `,
@@ -58,63 +58,5 @@ export const WithClickHandler: Story = {
         "TermsAndConditions component with click event handling.",
     },
     actions: { handles: ["click"] },
-  },
-};
-
-/** Customized Text */
-export const CustomizedText: Story = {
-  render: () => ({
-    components: { TermsAndConditions },
-    template: `
-      <div class="p-4 bg-gray-800 text-white">
-        <TermsAndConditions>
-          <template #default>
-            Privacy Policy
-          </template>
-        </TermsAndConditions>
-      </div>
-    `,
-  }),
-  parameters: {
-    docs: {
-      storyDescription: "TermsAndConditions component with customized text.",
-    },
-  },
-};
-
-/** TermsAndConditions on Light Background */
-export const LightBackground: Story = {
-  render: () => ({
-    components: { TermsAndConditions },
-    template: `
-      <div class="p-4 bg-white text-black">
-        <TermsAndConditions />
-      </div>
-    `,
-  }),
-  parameters: {
-    docs: {
-      storyDescription:
-        "TermsAndConditions component displayed on a light background.",
-    },
-  },
-};
-
-/** Focus and Hover States */
-export const FocusAndHoverStates: Story = {
-  render: () => ({
-    components: { TermsAndConditions },
-    template: `
-      <div class="p-4 bg-gray-800 text-white">
-        <p>Interact with the component to see hover and focus styles:</p>
-        <TermsAndConditions />
-      </div>
-    `,
-  }),
-  parameters: {
-    docs: {
-      storyDescription:
-        "Demonstrates the hover and focus states of the component.",
-    },
   },
 };

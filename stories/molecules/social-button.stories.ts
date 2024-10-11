@@ -8,7 +8,7 @@ import facebookIcon from "../../assets/img/facebook-logo.png";
 
 // Define the component's metadata using `Meta` type from Storybook
 const meta = {
-  title: "Components/SocialButton",
+  title: "molecules/SocialButton",
   component: SocialButton,
   argTypes: {
     iconSrc: {
@@ -50,7 +50,7 @@ export const Default: Story = {
     setup() {
       return { args };
     },
-    template: `<SocialButton :iconSrc="args.iconSrc" :label="args.label" @click="args.onClick" />`,
+    template: `<SocialButton class="bg-black max-w-sm" :iconSrc="args.iconSrc" :label="args.label" @click="args.onClick" />`,
   }),
 };
 
@@ -71,7 +71,7 @@ export const AppleButton: Story = {
     setup() {
       return { args };
     },
-    template: `<SocialButton :iconSrc="args.iconSrc" :label="args.label" @click="args.onClick" />`,
+    template: `<SocialButton  class="bg-black max-w-sm" :iconSrc="args.iconSrc" :label="args.label" @click="args.onClick" />`,
   }),
 };
 
@@ -92,7 +92,7 @@ export const FacebookButton: Story = {
     setup() {
       return { args };
     },
-    template: `<SocialButton :iconSrc="args.iconSrc" :label="args.label" @click="args.onClick" />`,
+    template: `<SocialButton  class="bg-black max-w-sm" :iconSrc="args.iconSrc" :label="args.label" @click="args.onClick" />`,
   }),
 };
 
@@ -113,6 +113,6 @@ export const GoogleButton: Story = {
     setup() {
       return { args };
     },
-    template: `<SocialButton :iconSrc="args.iconSrc" :label="args.label" @click="args.onClick" />`,
+    template: `<SocialButton class="bg-black max-w-sm" :iconSrc="args.iconSrc" :label="args.label" @click="args.onClick" />`,
   }),
 };

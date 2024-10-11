@@ -41,7 +41,7 @@ export const Default: Story = {
     template: `
       <div class="p-4 bg-gray-800 text-white">
         <ProfileUpload
-          :model-value="selectedFile"
+          :modelValue="selectedFile.value"
           @update:modelValue="handleUpdate"
         />
       </div>
@@ -79,7 +79,7 @@ export const PreselectedImage: Story = {
         alert(`File selected: ${file.name}`);
       };
 
-      return { selectedFile, handleUpdate, AladiaLogo };
+      return { selectedFile, handleUpdate };
     },
     template: `
       <div class="p-4 bg-gray-800 text-white">
@@ -94,49 +94,6 @@ export const PreselectedImage: Story = {
     docs: {
       storyDescription:
         "ProfileUpload component with a pre-selected image file.",
-    },
-  },
-};
-
-/** ProfileUpload with custom texts */
-export const CustomTexts: Story = {
-  render: () => ({
-    components: { ProfileUpload },
-    setup() {
-      const selectedFile = ref("");
-
-      const handleUpdate = (file: File) => {
-        const fileUrl = URL.createObjectURL(file);
-        selectedFile.value = fileUrl;
-        alert(`File selected: ${file.name}`);
-      };
-
-      return { selectedFile, handleUpdate, AladiaLogo };
-    },
-    template: `
-      <div class="p-4 bg-gray-800 text-white">
-        <ProfileUpload
-          :model-value="selectedFile"
-          @update:modelValue="handleUpdate"
-        >
-          <template #default>
-            <div class="text-left ml-4">
-              <div class="mb-2 text-base font-semibold text-white">
-                Hello there,
-              </div>
-              <div class="text-white/70 leading-tight text-sm">
-                Click here to upload your profile picture
-              </div>
-            </div>
-          </template>
-        </ProfileUpload>
-      </div>
-    `,
-  }),
-  parameters: {
-    docs: {
-      storyDescription:
-        "ProfileUpload component with custom title and subtitle texts.",
     },
   },
 };

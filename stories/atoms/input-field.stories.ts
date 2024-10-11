@@ -78,7 +78,6 @@ export const Default: Story = {
         v-model="value"
         v-bind="args"
       />
-      <p>Value: {{ value }}</p>
     `,
   }),
   parameters: {
@@ -111,7 +110,6 @@ export const WithIcon: Story = {
         v-model="value"
         v-bind="args"
       />
-      <p>Value: {{ value }}</p>
     `,
   }),
   parameters: {
@@ -121,7 +119,6 @@ export const WithIcon: Story = {
   },
 };
 
-/** Password input field with visibility toggle */
 export const PasswordField: Story = {
   args: {
     modelValue: "",
@@ -141,51 +138,17 @@ export const PasswordField: Story = {
     },
     template: `
       <InputField
-        v-model="value"
-        v-bind="args"
+        v-model="password"
+        inputId="password-field"
+        :icon="['fas', 'lock']"
+        label="Password"
+        placeholder="Enter Password"
       />
-      <p>Value: {{ value }}</p>
     `,
   }),
   parameters: {
     docs: {
       storyDescription: "Password input field with visibility toggle.",
-    },
-  },
-};
-
-/** Input field showing error message when invalid */
-export const InvalidInput: Story = {
-  args: {
-    modelValue: "",
-    placeholder: "Enter your email",
-    type: "email",
-    icon: undefined,
-    label: "Email",
-    disabled: false,
-    isValid: false,
-    errorMessage: "Please enter a valid email address.",
-  },
-  render: (args) => ({
-    components: { InputField },
-    setup() {
-      const value = ref(args.modelValue);
-      const isValid = ref(args.isValid);
-      return { args, value, isValid };
-    },
-    template: `
-      <InputField
-        v-model="value"
-        v-bind="args"
-        :isValid="isValid"
-      />
-      <p>Value: {{ value }}</p>
-      <button @click="isValid = !isValid">Toggle Validity</button>
-    `,
-  }),
-  parameters: {
-    docs: {
-      storyDescription: "Input field showing error message when invalid.",
     },
   },
 };
@@ -220,74 +183,4 @@ export const Disabled: Story = {
       storyDescription: "Disabled input field.",
     },
   },
-};
-
-/** Input field with label for accessibility */
-export const WithLabel: Story = {
-  args: {
-    modelValue: "",
-    placeholder: "Enter your name",
-    type: "text",
-    icon: undefined,
-    label: "Name",
-    disabled: false,
-    isValid: true,
-    errorMessage: "",
-  },
-  render: (args) => ({
-    components: { InputField },
-    setup() {
-      const value = ref(args.modelValue);
-      return { args, value };
-    },
-    template: `
-      <InputField
-        v-model="value"
-        v-bind="args"
-      />
-    `,
-  }),
-  parameters: {
-    docs: {
-      storyDescription:
-        "Input field with an accessible label for screen readers.",
-    },
-  },
-};
-
-/** Input fields with different types */
-export const DifferentTypes: Story = {
-  parameters: {
-    docs: {
-      storyDescription: "Input fields with different types.",
-    },
-  },
-  render: () => ({
-    components: { InputField },
-    setup() {
-      const textValue = ref("");
-      const numberValue = ref("");
-      const emailValue = ref("");
-      return { textValue, numberValue, emailValue };
-    },
-    template: `
-      <div class="space-y-4">
-        <InputField
-          v-model="textValue"
-          placeholder="Text input"
-          type="text"
-        />
-        <InputField
-          v-model="numberValue"
-          placeholder="Number input"
-          type="number"
-        />
-        <InputField
-          v-model="emailValue"
-          placeholder="Email input"
-          type="email"
-        />
-      </div>
-    `,
-  }),
 };

@@ -27,13 +27,20 @@
         <TermsCheckbox v-model:checked="isChecked" />
         <p class="text-center text-xs">Enter your details</p>
       </div>
-      <InputField :icon="['fas', 'user']" placeholder="Name" v-model="name" />
       <InputField
+        inputId="name"
+        :icon="['fas', 'user']"
+        placeholder="Name"
+        v-model="name"
+      />
+      <InputField
+        inputId="surname"
         :icon="['fas', 'user']"
         placeholder="Surname"
         v-model="surname"
       />
       <InputField
+        inputId="email"
         :icon="['fas', 'envelope']"
         placeholder="Email"
         :isValid="isEmailValid"
@@ -41,6 +48,7 @@
         v-model="email"
       />
       <InputField
+        inputId="password"
         :icon="['fas', 'lock']"
         placeholder="Password"
         type="password"
@@ -48,6 +56,7 @@
         v-model="password"
       />
       <InputField
+        inputId="password"
         :icon="['fas', 'lock']"
         placeholder="Confirm Password"
         type="password"

@@ -3,6 +3,7 @@
     <div class="flex justify-center text-white text-sm">Enter your email</div>
     <InputField
       v-model="email"
+      inputId="email-field"
       :icon="['fas', 'envelope']"
       label="Email Address"
       placeholder="Enter your email"

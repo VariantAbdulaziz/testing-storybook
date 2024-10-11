@@ -14,6 +14,7 @@
       />
       <!-- Hidden File Input -->
       <input
+        id="file-upload"
         type="file"
         accept="image/*"
         ref="fileInput"

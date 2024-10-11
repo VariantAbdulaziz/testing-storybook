@@ -3,6 +3,7 @@
     <!-- Checkbox Input with v-model to track and emit changes -->
     <input
       type="checkbox"
+      id="terms-checkbox"
       v-model="localChecked"
       class="flex h-3 w-3 mr-2 cursor-pointer bg-black items-center justify-center rounded border pt-0.5 transition-all border-white/50 hover:border-white"
     />
@@ -20,25 +21,28 @@
   </div>
 </template>
 
-<script setup>
-import { ref, watch } from "vue";
-
-// Define props and emit for tracking the checkbox state
-const props = defineProps({
-  modelValue: {
-    type: Boolean,
-    required: true,
+<script>
+export default {
+  props: {
+    modelValue: {
+      type: Boolean,
+      required: true,
+    },
   },
-});
-const emit = defineEmits(["update:checked"]);
-
-// Local state for the checkbox
-const localChecked = ref(props.modelValue);
-
-// Watch the local state and emit changes to the parent
-watch(localChecked, (newValue) => {
-  emit("update:checked", newValue);
-});
+  data() {
+    return {
+      localChecked: this.modelValue,
+    };
+  },
+  watch: {
+    localChecked(newValue) {
+      this.$emit("update:checked", newValue);
+    },
+    modelValue(newValue) {
+      this.localChecked = newValue; // Keep sync with parent prop changes
+    },
+  },
+};
 </script>
 
 <style scoped></style>

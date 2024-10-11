@@ -54,6 +54,7 @@
       </div>
 
       <InputField
+        inputId="recovery-email"
         v-model="recoveryEmail"
         :icon="['fas', 'envelope']"
         label="Email Address"

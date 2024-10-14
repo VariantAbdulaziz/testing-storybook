@@ -1,0 +1,12 @@
+import { library, config } from "/_nuxt/node_modules/.cache/vite/client/deps/@fortawesome_fontawesome-svg-core.js?v=21adf959";
+import { FontAwesomeIcon } from "/_nuxt/node_modules/.cache/vite/client/deps/@fortawesome_vue-fontawesome.js?v=21adf959";
+import { fas } from "/_nuxt/node_modules/.cache/vite/client/deps/@fortawesome_free-solid-svg-icons.js?v=21adf959";
+
+import { defineNuxtPlugin } from "/_nuxt/node_modules/nuxt/dist/app/nuxt.js?v=21adf959";
+config.autoAddCss = false;
+library.add(fas);
+export default defineNuxtPlugin((nuxtApp) => {
+  nuxtApp.vueApp.component("font-awesome-icon", FontAwesomeIcon);
+});
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6IkFBQUEsU0FBUyxTQUFTLGNBQWM7QUFDaEMsU0FBUyx1QkFBdUI7QUFDaEMsU0FBUyxXQUFXOzs7QUFFcEIsT0FBTyxhQUFhO0FBRXBCLFFBQVEsSUFBSSxHQUFHO0FBRWYsZUFBZSxpQkFBaUIsQ0FBQyxZQUFZO0FBQzNDLFVBQVEsT0FBTyxVQUFVLHFCQUFxQixlQUFlO0FBQy9ELENBQUMiLCJuYW1lcyI6W10sImlnbm9yZUxpc3QiOltdLCJzb3VyY2VzIjpbImZvbnRhd2Vzb21lLnRzIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IGxpYnJhcnksIGNvbmZpZyB9IGZyb20gXCJAZm9ydGF3ZXNvbWUvZm9udGF3ZXNvbWUtc3ZnLWNvcmVcIjtcbmltcG9ydCB7IEZvbnRBd2Vzb21lSWNvbiB9IGZyb20gXCJAZm9ydGF3ZXNvbWUvdnVlLWZvbnRhd2Vzb21lXCI7XG5pbXBvcnQgeyBmYXMgfSBmcm9tIFwiQGZvcnRhd2Vzb21lL2ZyZWUtc29saWQtc3ZnLWljb25zXCI7XG5cbmNvbmZpZy5hdXRvQWRkQ3NzID0gZmFsc2U7XG5cbmxpYnJhcnkuYWRkKGZhcyk7XG5cbmV4cG9ydCBkZWZhdWx0IGRlZmluZU51eHRQbHVnaW4oKG51eHRBcHApID0+IHtcbiAgbnV4dEFwcC52dWVBcHAuY29tcG9uZW50KFwiZm9udC1hd2Vzb21lLWljb25cIiwgRm9udEF3ZXNvbWVJY29uKTtcbn0pO1xuIl0sImZpbGUiOiIvaG9tZS9WYXJpYW50QWJkdWxheml6L2Rldi9mcm9udGVuZC1xYS1zZWxlY3Rpb24vcGx1Z2lucy9mb250YXdlc29tZS50cyJ9
